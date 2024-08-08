@@ -1,5 +1,6 @@
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
+
 import 'package:ticket_booking/Screens/home.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -19,7 +20,7 @@ class _BottomBarState extends State<BottomNavBar> {
   }
 
   static final List<Widget> _widgetoption = <Widget>[
-    const Text("Home"),
+    const MyHomePage(),
     const Text("Search"),
     const Text("Tickets"),
     const Text("Profile"),
