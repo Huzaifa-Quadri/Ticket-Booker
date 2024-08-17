@@ -89,8 +89,17 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ],
                 ),
-                const TicketView()
               ],
+            ),
+          ),
+          const Gap(12),
+          const SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            // padding: EdgeInsets.only(
+            //   right: 20,
+            // ),
+            child: Row(
+              children: [TicketView(), TicketView()],
             ),
           )
         ],
