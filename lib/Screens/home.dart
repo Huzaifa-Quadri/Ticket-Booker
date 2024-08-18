@@ -4,6 +4,7 @@ import 'package:gap/gap.dart';
 
 import 'package:ticket_booking/Screen_Widgets/hotel_view.dart';
 import 'package:ticket_booking/Screen_Widgets/ticket_view.dart';
+import 'package:ticket_booking/utils/app_info_list.dart';
 
 import '../utils/theme_style.dart';
 
@@ -94,15 +95,13 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           const Gap(12),
-          const SingleChildScrollView(
+          SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             // padding: EdgeInsets.only(right: 20),
             child: Row(
-              children: [
-                TicketView(),
-                TicketView(),
-              ],
-            ),
+                children: ticketList
+                    .map((singleTicket) => TicketView(tickets: singleTicket))
+                    .toList()),
           ),
           //* Gap(10),    -> Not Needed
           Container(
@@ -128,18 +127,13 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           const Gap(12),
-          const SingleChildScrollView(
+          SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            
-            padding: EdgeInsets.only(left: 20),
+            padding: const EdgeInsets.only(left: 20),
             child: Row(
-              children: [
-                HotelViewScreen(),
-                HotelViewScreen(),
-                HotelViewScreen(),
-                HotelViewScreen(),
-                
-              ]
+              children: hotelList
+                  .map((singleHotel) => HotelViewScreen(hotels: singleHotel))
+                  .toList(),
             ),
           ),
         ],

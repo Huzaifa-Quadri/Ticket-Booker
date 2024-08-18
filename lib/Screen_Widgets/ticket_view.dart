@@ -4,7 +4,9 @@ import 'package:ticket_booking/utils/theme_style.dart';
 import 'package:ticket_booking/Widgets/flight_route_icon.dart';
 
 class TicketView extends StatelessWidget {
-  const TicketView({super.key});
+  const TicketView({super.key, required this.tickets});
+
+  final Map<String, dynamic> tickets;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +40,7 @@ class TicketView extends StatelessWidget {
                     //! Multiple elements in each column as vertical rows
                     children: [
                       Text(
-                        "NYC",
+                        tickets['from']['code'],
                         style: AppStyles.headLineStyle3
                             .copyWith(color: Colors.white),
                       ),
@@ -46,7 +48,7 @@ class TicketView extends StatelessWidget {
                         child: FlightRouteWidget(),
                       ),
                       Text(
-                        "LDN",
+                        tickets['to']['code'],
                         style: AppStyles.headLineStyle3
                             .copyWith(color: Colors.white),
                       ),
@@ -56,17 +58,17 @@ class TicketView extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "New-York",
+                        tickets['from']['code'],
                         style: AppStyles.headLineStyle4
                             .copyWith(color: Colors.white),
                       ),
                       Text(
-                        "8H 10M",
+                        tickets['flying_time'],
                         style: AppStyles.headLineStyle4
                             .copyWith(color: Colors.white),
                       ),
                       Text(
-                        "London",
+                        tickets['to']['name'],
                         style: AppStyles.headLineStyle4
                             .copyWith(color: Colors.white),
                       ),
@@ -78,7 +80,7 @@ class TicketView extends StatelessWidget {
 
             //! Red part of Ticket Starting here
             Container(
-              color: AppStyles.orangeColor,
+              color: AppStyles.orangeColor, //? Dotted Line Color
               child: Row(
                 children: [
                   const SizedBox(
@@ -145,7 +147,7 @@ class TicketView extends StatelessWidget {
                   Column(
                     children: [
                       Text(
-                        "1 MAY",
+                        tickets['date'],
                         style: AppStyles.headLineStyle3
                             .copyWith(color: Colors.white),
                       ),
@@ -159,7 +161,7 @@ class TicketView extends StatelessWidget {
                   Column(
                     children: [
                       Text(
-                        "8:00 AM",
+                        tickets['departure_time'],
                         style: AppStyles.headLineStyle3
                             .copyWith(color: Colors.white),
                       ),
@@ -173,7 +175,7 @@ class TicketView extends StatelessWidget {
                   Column(
                     children: [
                       Text(
-                        "23",
+                        tickets['number'].toString(),
                         style: AppStyles.headLineStyle3
                             .copyWith(color: Colors.white),
                       ),
