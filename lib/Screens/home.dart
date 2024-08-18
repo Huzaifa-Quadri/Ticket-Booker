@@ -2,7 +2,8 @@ import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import 'package:ticket_booking/Widgets/ticket_view.dart';
+import 'package:ticket_booking/Screen_Widgets/hotel_view.dart';
+import 'package:ticket_booking/Screen_Widgets/ticket_view.dart';
 
 import '../utils/theme_style.dart';
 
@@ -95,13 +96,52 @@ class _MyHomePageState extends State<MyHomePage> {
           const Gap(12),
           const SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            // padding: EdgeInsets.only(
-            //   right: 20,
-            // ),
+            // padding: EdgeInsets.only(right: 20),
             child: Row(
-              children: [TicketView(), TicketView()],
+              children: [
+                TicketView(),
+                TicketView(),
+              ],
             ),
-          )
+          ),
+          //* Gap(10),    -> Not Needed
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Row(
+              children: [
+                Text(
+                  'Upcoming Flights ',
+                  style: AppStyles.headLineStyle2,
+                ),
+                const Spacer(),
+                InkWell(
+                  onTap: () {
+                    print("Inkwell pressed");
+                  },
+                  child: Text(
+                    'View all ',
+                    style: AppStyles.textStyle
+                        .copyWith(color: AppStyles.primaryColor),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const Gap(12),
+          const SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            
+            padding: EdgeInsets.only(left: 20),
+            child: Row(
+              children: [
+                HotelViewScreen(),
+                HotelViewScreen(),
+                HotelViewScreen(),
+                HotelViewScreen(),
+                
+              ]
+            ),
+          ),
         ],
       ),
     );
