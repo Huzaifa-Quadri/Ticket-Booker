@@ -64,7 +64,7 @@ class SearchScreen extends StatelessWidget {
             ),
           ),
           const Gap(40),
-  
+
           const IconText(
               icon: Icons.flight_takeoff,
               icontext: 'Departure',
@@ -83,8 +83,8 @@ class SearchScreen extends StatelessWidget {
               isIconOn: false,
               color: Color(0xD91130CE)),
           const Gap(20),
-          //Tobe made external widget
-          //********* 
+          //Todo To be made external widget
+          //*********
           Row(
             children: [
               Text(
@@ -105,6 +105,7 @@ class SearchScreen extends StatelessWidget {
             ],
             //********
           ),
+          const Gap(15),
           const TableViewUpcommingflights(),
         ],
       ),

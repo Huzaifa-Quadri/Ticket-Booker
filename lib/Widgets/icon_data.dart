@@ -62,7 +62,7 @@ class IconText extends StatelessWidget {
       child: Center(
         child: Text(
           icontext,
-          style: AppStyles.headLineStyle3,
+          style: AppStyles.headLineStyle3.copyWith(color: Colors.white),
         ),
       ),
     );
