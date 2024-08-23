@@ -24,13 +24,19 @@ class FlightRouteWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: List.generate(
                       (spaceWidth / 6).floor(),
-                      (index) => const Text("-"),
+                      (index) => const Text(
+                        "-",
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
                   Center(
                     child: Transform.rotate(
                       angle: 1.5,
-                      child: const Icon(Icons.airplanemode_active),
+                      child: const Icon(
+                        Icons.airplanemode_active,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ],
