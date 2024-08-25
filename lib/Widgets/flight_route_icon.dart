@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:ticket_booking/Widgets/circle_widget.dart';
 
 class FlightRouteWidget extends StatelessWidget {
-  const FlightRouteWidget({super.key});
+  const FlightRouteWidget({super.key, this.color});
+  final Color? color;
 
   //? New formatting of different widgets
 
@@ -12,7 +13,7 @@ class FlightRouteWidget extends StatelessWidget {
     return Row(
       children: [
         const Spacer(),
-        const CircleWidget(),
+        color == null ? const CircleWidget() : const CircleWidget(color: Colors.blue,),
         Expanded(
           child: LayoutBuilder(
             builder: (context, constraints) {
@@ -24,18 +25,18 @@ class FlightRouteWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: List.generate(
                       (spaceWidth / 6).floor(),
-                      (index) => const Text(
+                      (index) => Text(
                         "-",
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: color ?? Colors.white),
                       ),
                     ),
                   ),
                   Center(
                     child: Transform.rotate(
                       angle: 1.5,
-                      child: const Icon(
+                      child: Icon(
                         Icons.airplanemode_active,
-                        color: Colors.white,
+                        color: color ?? Colors.white,
                       ),
                     ),
                   ),
@@ -44,7 +45,7 @@ class FlightRouteWidget extends StatelessWidget {
             },
           ),
         ),
-        const CircleWidget(),
+        color == null ? const CircleWidget() : const CircleWidget(color: Colors.blue,),
         const Spacer()
       ],
     );

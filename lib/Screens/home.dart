@@ -103,7 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     .map((singleTicket) => TicketView(tickets: singleTicket))
                     .toList()),
           ),
-          //* Gap(10),    -> Not Needed
+          const Gap(15), 
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Row(

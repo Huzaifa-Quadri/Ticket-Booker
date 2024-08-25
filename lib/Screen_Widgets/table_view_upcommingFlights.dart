@@ -52,7 +52,7 @@ class TableViewUpcommingflights extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       image: const DecorationImage(
                         fit: BoxFit.cover,
-                        image: AssetImage("assets/images/room_one.jpg"),
+                        image: AssetImage("assets/images/airplane_interior.jpg"),
                       )),
                 ), //! COntainer 3 - Image
                 const Gap(12),
