@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ticket_booking/Screens/home.dart';
-
 import 'Screens/bottom_bar.dart';
 
 void main() {

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ticket_booking/Screens/TicketScreen.dart';
 
 import 'package:ticket_booking/Screens/home.dart';
+import 'package:ticket_booking/Screens/profile_screen.dart';
 import 'package:ticket_booking/Screens/search_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -13,7 +14,7 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomNavBar> {
-  int activeIndex = 2;
+  int activeIndex = 3;
   void _OnTappedNav(int index){
     setState(() {
       activeIndex = index;
@@ -25,7 +26,7 @@ class _BottomBarState extends State<BottomNavBar> {
     const MyHomePage(),
     const SearchScreen(),
     const Ticketscreen(),
-    const Text("Profile"),
+    const ProfileScreen(),
   ];
 
   @override
@@ -33,7 +34,6 @@ class _BottomBarState extends State<BottomNavBar> {
     return Scaffold(
 
       body: Center(
-        // child: Text("Just do as i say !");
           child: _widgetoption[activeIndex]
       ),
       bottomNavigationBar: BottomNavigationBar(
