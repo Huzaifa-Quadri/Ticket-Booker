@@ -162,7 +162,9 @@ class ProfileScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 12),
             child: Column(
               children: [
+                //! Counter Starts here
                 const CounterAnimationScreen(endValue: 192802, delayTime: 2),
+                const Gap(25),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -221,7 +223,18 @@ class ProfileScreen extends StatelessWidget {
               ],
             ),
           ),
-
+          const Gap(25),
+          Center(
+              child: InkWell(
+            onTap: () {
+              print("more Miles account screen inkwell pressed");
+            },
+            child: Text(
+              "How to get more miles",
+              style: AppStyles.headLineStyle3
+                  .copyWith(color: AppStyles.primaryColor),
+            ),
+          ))
         ],
       ),
     );

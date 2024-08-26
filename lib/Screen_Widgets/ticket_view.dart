@@ -108,10 +108,11 @@ class TicketView extends StatelessWidget {
                   ),
                   Expanded(
                       child: Padding(
-                    padding: const EdgeInsets.all(2.0),
-                    child: color == null ? const DashedlineSeperatorWidget(sections: 12) : DashedlineSeperatorWidget(sections: 12, color: Colors.grey.shade600,)
-                    
-                  )),
+                          padding: const EdgeInsets.all(2.0),
+                          child: color == null
+                              ? const DashedlineSeperatorWidget(sections: 12)
+                              : DashedlineSeperatorWidget(sections: 12, color: Colors.grey.shade600,))
+                  ),
                   const SizedBox(
                     //? For semicircles on left mid and right mid of card (invisible in white bg)
                     height: 20,
@@ -129,13 +130,12 @@ class TicketView extends StatelessWidget {
               ),
             ),
             Container(
+              //! Red Color Column Container Section
               padding: const EdgeInsets.only(
                   top: 10, bottom: 16, right: 16, left: 16),
               // height: 50,
               decoration: BoxDecoration(
-                color: color ??
-                    AppStyles
-                        .orangeColor, //! Red Color Column Container Section
+                color: color ?? AppStyles.orangeColor,
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(color == null ? 15 : 0),
                   bottomRight: Radius.circular(color == null ? 15 : 0),
@@ -145,6 +145,7 @@ class TicketView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         tickets['date'],
@@ -177,6 +178,7 @@ class TicketView extends StatelessWidget {
                     ],
                   ),
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Text(
                         tickets['number'].toString(),

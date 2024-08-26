@@ -26,7 +26,8 @@ class Ticketscreen extends StatelessWidget {
             padding: const EdgeInsets.only(left: 10, right: 10),
             children: [
               const Gap(40),
-              Text('Tickets', style: AppStyles.headLineStyle1),
+              Text('Tickets',
+                  style: AppStyles.headLineStyle1.copyWith(fontSize: 30)),
               const Gap(20),
               const TicketTabs(tab1: 'Upcomming', tab2: 'Previous'),
               const Gap(20),

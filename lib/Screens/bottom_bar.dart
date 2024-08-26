@@ -14,7 +14,7 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomNavBar> {
-  int activeIndex = 3;
+  int activeIndex = 0;
   void _OnTappedNav(int index){
     setState(() {
       activeIndex = index;

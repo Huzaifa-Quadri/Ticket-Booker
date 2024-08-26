@@ -26,7 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Column(
               children: [
-                const Gap(50),
+                const Gap(45),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             style: AppStyles.headLineStyle3
                                 .copyWith(color: Colors.grey.shade500)),
                         const Gap(5),
-                        Text("Book Tickets", style: AppStyles.headLineStyle1),
+                        Text("Book Tickets", style: AppStyles.headLineStyle1.copyWith(fontSize: 30)),
                       ],
                     ),
                     Container(
@@ -115,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 const Spacer(),
                 InkWell(
                   onTap: () {
-                    print("Inkwell pressed");
+                    print("home screen Edit Inkwell pressed");
                   },
                   child: Text(
                     'View all ',

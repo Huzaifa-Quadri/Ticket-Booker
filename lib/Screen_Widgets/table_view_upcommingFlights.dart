@@ -11,8 +11,8 @@ class TableViewUpcommingflights extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = AppLayout.getSize(context);
-    return Container(
-      //! Container 1
+    return Container(     //! Container 1
+
       decoration: const BoxDecoration(
         // color: AppStyles.bgColor,
         color: Colors.transparent,
@@ -25,10 +25,8 @@ class TableViewUpcommingflights extends StatelessWidget {
       // height: 300,  //* keeping bounded the length for all other widgets inside
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        //? From here he explains -----------------------------------------------
         children: [
-          Container(
-            //! COntainer 2
+          Container(      //! Container 2
             height: 400,
             width: size.width * 0.42,
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
@@ -44,17 +42,17 @@ class TableViewUpcommingflights extends StatelessWidget {
                 BoxShadow(color: Colors.grey, blurRadius: 1, spreadRadius: 1),
               ],
             ),
-            child: Column(
+            child: Column(      
               children: [
-                Container(
+                Container(      //! Container 3 - Image
                   height: 190, //todo Have to make it dynamic
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       image: const DecorationImage(
                         fit: BoxFit.cover,
-                        image: AssetImage("assets/images/airplane_interior.jpg"),
+                        image: AssetImage("assets/images/airplane_interior.png"),
                       )),
-                ), //! COntainer 3 - Image
+                ), 
                 const Gap(12),
                 Text(
                   "20% discount on early booking of this flight, Don't miss.",
@@ -68,7 +66,7 @@ class TableViewUpcommingflights extends StatelessWidget {
             children: [
               Stack(
                 children: [
-                  Container(
+                  Container(      //! Container 4
                     width: size.width * 0.44,
                     height: 200,
                     decoration: BoxDecoration(
@@ -100,9 +98,9 @@ class TableViewUpcommingflights extends StatelessWidget {
                     child: Ring(),
                   ),
                 ],
-              ), //! COntainer 4
+              ), 
               const Gap(5),
-              Container(
+              Container(      //! Container 5
                 width: size.width * 0.44,
                 height: 180,
                 decoration: BoxDecoration(
@@ -129,7 +127,7 @@ class TableViewUpcommingflights extends StatelessWidget {
                     )
                   ],
                 ),
-              ), //! COntainer 5
+              ), 
             ],
           )
         ],
